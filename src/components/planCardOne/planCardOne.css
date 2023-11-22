@@ -17,3 +17,9 @@
 .cards {
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
+
+.card-link {
+    color: #000 !important;
+    font-weight: 600;
+    cursor: pointer;
+}
