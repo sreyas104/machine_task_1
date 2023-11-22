@@ -1,27 +1,38 @@
 import React from 'react'
-import './planCard.css'
+import './planCardOne.css'
 import { Card, Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faCloud, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
 
-function PlanCard() {
+function PlanCardOne(props) {
+
+    let { title,
+        orignalPrice,
+        sellingPrice,
+        userYouGet,
+        storageYouGet,
+        supportYouGet, color } = props.data
+
+
+
+
     return (
-        <Container>
-            <Card className='col-md-' style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}>
+        <Card className='cards'>
+            <Container>
                 <Card.Body>
                     <Card.Title>
                         <h2>
-                            Basic
+                            {title}
                         </h2>
                     </Card.Title>
-                    <p className="strikedPrice">$ 89.9/mo</p>
+                    <p className="strikedPrice">${orignalPrice}</p>
                     <Card.Subtitle>
                         <h4>
-                            $ 9.99/mo
+                            $&nbsp;{sellingPrice}/mo
                         </h4>
 
                     </Card.Subtitle>
-                    <button className='buttonGet'>Get Started  <FontAwesomeIcon icon={faArrowRight} /></button>
+                    <button className='buttonGet' style={{ backgroundColor: `${color}` }}>Get Started  <FontAwesomeIcon icon={faArrowRight} /></button>
                     <hr />
                     <Card.Text className='p-0 m-1'>
                         <p style={{ fontSize: "13px" }}>
@@ -31,14 +42,14 @@ function PlanCard() {
                     <Card.Text>
                         <div className="description">
                             <p>
-                                <FontAwesomeIcon icon={faUser} className='px-2' />  Upto 25 users
+                                <FontAwesomeIcon icon={faUser} className='px-2' />  {userYouGet}
                             </p>
                             <p>
-                                <FontAwesomeIcon icon={faCloud} className='px-2' />  Upto 25gb storage
+                                <FontAwesomeIcon icon={faCloud} className='px-2' />  {storageYouGet}
                             </p>
                             <p>
 
-                                <FontAwesomeIcon icon={faEnvelope} className='px-2' /> Email support
+                                <FontAwesomeIcon icon={faEnvelope} className='px-2' /> {supportYouGet}
                             </p>
                         </div>
 
@@ -48,9 +59,9 @@ function PlanCard() {
                         Explore more feature
                     </Card.Link>
                 </Card.Body>
-            </Card>
-        </Container>
+            </Container >
+        </Card>
     )
 }
 
-export default PlanCard
+export default PlanCardOne;

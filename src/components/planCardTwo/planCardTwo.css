@@ -1,0 +1,20 @@
+.FreeHead {
+    /* background-color: greenyellow; */
+    display: inline;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+
+
+.GetButton {
+    border: none;
+    padding: 10px 1rem;
+    border-radius: 10px;
+    /* background-color: greenyellow; */
+
+}
+
+.cards {
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}

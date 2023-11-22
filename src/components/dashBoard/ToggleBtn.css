@@ -1,0 +1,27 @@
+.buttons_container {
+    max-width: 300px !important;
+    display: flex;
+    border: 2px solid #0000008e;
+    border-radius: 34px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.btn {
+    flex: 1;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-radius: 29px !important;
+    cursor: pointer;
+    transition: background-color 0.3s !important;
+}
+
+.selectedBtn {
+    background-color: #c9e4ff !important;
+    /* color: white !important; */
+}
+
+.btn:hover {
+    background-color: #c9e4ff !important;
+}

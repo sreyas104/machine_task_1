@@ -1,21 +1,12 @@
 import React from 'react'
 import './HomeScreen.css'
-
-import PlanCard from '../components/planCard/PlanCard';
-import { Col } from 'react-bootstrap';
-
-
+import DashBoard from '../components/dashBoard/DashBoard';
 
 function HomeScreen() {
 
-    let plan = [1, 2, 3]
     return (
         <div className='HomeScreen row'>
-            {plan.map((value, index) => {
-                return (<Col key={index}>
-                    <PlanCard />
-                </Col>)
-            })}
+            <DashBoard />
         </div>
     )
 }
