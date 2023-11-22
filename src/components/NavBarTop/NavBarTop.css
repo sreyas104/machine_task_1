@@ -1,0 +1,35 @@
+.Nav_Top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.name {
+    display: inline-block;
+    background-color: #fff;
+    padding: 5px 15px !important;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 8px 6px 15px !important;
+
+}
+
+.small-dropdown {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 8px 6px 15px !important;
+    margin-left: 10px;
+
+}
+
+.small-dropdown button {
+    border: none;
+    background-color: transparent;
+    padding: 10px 20px;
+}

@@ -1,8 +1,36 @@
 .dashBoard {
     background-color: #ffff;
-    padding: 3rem;
+    /* padding: 3rem; */
+    margin-top: 0;
 }
 
 .Heading {
+    font-weight: 700;
+}
+
+.sideMenu {
+    padding: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 8px 6px 15px !important;
+}
+
+.logout-button {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    color: #046cbf;
+    font-weight: 500;
+    font-size: 20px;
+    /* padding-left: 2rem; */
+    margin-bottom: 1rem;
+    right: 0;
+    left: 0;
+    /* background-color: #046bbf5d; */
+}
+
+.logout-button button {
+    border: none;
+    background-color: transparent;
+    color: #046cbf;
     font-weight: 700;
 }

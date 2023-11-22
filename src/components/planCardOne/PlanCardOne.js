@@ -48,12 +48,9 @@ function PlanCardOne(props) {
                                 <FontAwesomeIcon icon={faCloud} className='px-2' />  {storageYouGet}
                             </p>
                             <p>
-
                                 <FontAwesomeIcon icon={faEnvelope} className='px-2' /> {supportYouGet}
                             </p>
                         </div>
-
-
                     </Card.Text>
                     <Card.Link>
                         Explore more feature

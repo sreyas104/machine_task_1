@@ -4,6 +4,10 @@ import { Col, Container, Row } from 'react-bootstrap'
 import ToggleSwitch from './ToggleSwitch'
 import PlanCardOne from '../planCardOne/PlanCardOne'
 import PlanCardTwo from '../planCardTwo/PlanCardTwo'
+import SideMenu from '../sidemenu/SideMenu'
+import {
+    LogoutOutlined
+} from '@ant-design/icons';
 
 function DashBoard() {
 
@@ -63,45 +67,60 @@ function DashBoard() {
 
     return (
         <div className='dashBoard'>
-            <Container>
+            <Row style={{ overflowX: "hidden", margin: "0px", padding: "0px" }}>
+                <Col md={2} className='sideMenu' style={{ position: "relative" }} >
+                    <SideMenu />
+                    <div className="logout-button">
+                        <button>
+                            Logout <LogoutOutlined />
+                        </button>
 
-                {/* Heading Row ----------- */}
-                <Row>
-                    <Col md={6}>
-                        <h2 className='Heading'>Choose a plan that right for you !</h2>
-                    </Col>
-                </Row>
 
-                {/* Toggle Switch -----------  */}
+                    </div>
+                </Col>
+                <Col md={10} sm={12} style={{ padding: "3rem" }}>
+                    <Container>
 
-                <Row style={{ display: 'flex', justifyContent: 'right', padding: "1rem" }}>
-                    <Col md={3}>
-                        <ToggleSwitch />
-                    </Col>
-                </Row>
-                {/* Section one Cards-------------  */}
-                <Row>
-
-                    {cardOne.map((data, index) => {
-                        console.log('index', index)
-                        return (
-                            <Col key={index} md={4}>
-                                <PlanCardOne data={data} />
+                        {/* Heading Row ----------- */}
+                        <Row>
+                            <Col md={6} className='text-center'>
+                                <h2 className='Heading'>Choose a plan that right for you !</h2>
                             </Col>
-                        )
-                    })}
-                </Row>
+                        </Row>
 
-                <Row>
-                    {cardTwo.map((data, index) => {
-                        return (
-                            <Col key={index} md={6}>
-                                <PlanCardTwo data={data} />
+                        {/* Toggle Switch -----------  */}
+
+                        <Row style={{ display: 'flex', justifyContent: 'right', padding: "1rem" }}>
+                            <Col md={3}>
+                                <ToggleSwitch />
                             </Col>
-                        )
-                    })}
-                </Row>
-            </Container>
+                        </Row>
+                        {/* Section one Cards-------------  */}
+                        <Row>
+
+                            {cardOne.map((data, index) => {
+                                console.log('index', index)
+                                return (
+                                    <Col key={index} md={4}>
+                                        <PlanCardOne data={data} />
+                                    </Col>
+                                )
+                            })}
+                        </Row>
+
+                        <Row>
+                            {cardTwo.map((data, index) => {
+                                return (
+                                    <Col key={index} md={6}>
+                                        <PlanCardTwo data={data} />
+                                    </Col>
+                                )
+                            })}
+                        </Row>
+                    </Container>
+                </Col>
+            </Row>
+
         </div>
     )
 }
